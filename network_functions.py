@@ -3,11 +3,8 @@ import networkx as nx
 import random
 # from global_file import params
 import global_file
-from copy import copy
 import warnings
 warnings.simplefilter("ignore", UserWarning)
-import matplotlib
-matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
 
@@ -111,21 +108,6 @@ def return_path_key(*args):
     if len(keys) == 1:
         keys = keys[0]
     return keys
-
-
-def plot_network(G, Alice=None, Bob=None):
-    """
-    Generates a plot of the network, with the nodes in their
-    respective positions and Alice and Bob marked.
-    """
-    pos = nx.get_node_attributes(G, 'pos')
-    node_colors = ['deepskyblue' if node in (Alice, Bob)
-                   else 'lightskyblue' for node in G.nodes()]
-    plt.plot()
-    nx.draw(G, pos=pos, with_labels=False, width=2,
-            node_color=node_colors, node_size=700)
-    nx.draw_networkx_labels(G, pos=pos, font_size=9)
-    plt.show()
 
 
 def find_candidate_paths(G, Alice, Bob):

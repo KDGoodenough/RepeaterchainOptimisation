@@ -1,6 +1,5 @@
 import matplotlib
 from matplotlib.figure import figaspect
-matplotlib.use('TkAgg')
 matplotlib.rc('text', usetex=True)
 from plot_functions import *
 import warnings

@@ -18,7 +18,6 @@ import scipy.ndimage as ndimage
 from random import randint
 import matplotlib
 import re
-matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
 import matplotlib.ticker as ticker
