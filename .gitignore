@@ -1,0 +1,35 @@
+*.pyc
+venv
+parameters/
+parameter exploration IP/
+pkl files/
+long distance 10 repeaters NP/
+long distance 5 repeaters NP/
+800 km IP + NP/
+2000 km IP + NP/
+4000 km IP + NP/
+8000 km IP + NP/
+Notes/
+figs/
+15-25-50 km processing nodes/
+200-400-600-800 km IP/
+2000 IP + NP/
+50-100-150-200 km IP/
+50-100-150-200 km processing nodes/
+50km IP/
+8000 IP + NP/
+NIP short distances parameter set 1/
+NP contour 21 by 21/
+NP contour 7 by 7/
+NP intermediate distances/
+NP long distances/
+NP long intermediate distance 28 feb/
+comparing ip and mp/
+march 1 data/
+no cc_time/
+scheme graphs/
+scheme_graph data
+__pycache__/
+.DS_Store
+.idea/
+
