@@ -39,7 +39,7 @@ def optimise_repeater_chain(distance, n, general_distillation,
     return G
 
 
-def optimise_repeater_with_parameters_from_file(filename):
+def optimise_repeater_with_parameters_from_file(filename, save=False):
     global_file.params = create_params_dict('parameters/' + filename + '.txt')
 
     G = create_repeater_chain(global_file.params.distance, int(global_file.params.n))
@@ -48,8 +48,9 @@ def optimise_repeater_with_parameters_from_file(filename):
     optimise_schemes(G, global_file.params.general_distillation,
                      symmetricoptimisation=global_file.params.symmetricoptimisation)
 
-    # with open('pkl_files/' + filename + '.pkl', 'wb') as f:  # Python 3: open(..., 'wb')
-    #     pickle.dump(path_dict, f)
+    if save:
+        with open('pkl_files/' + filename + '.pkl', 'wb') as f:  # Python 3: open(..., 'wb')
+            pickle.dump(path_dict, f)
 
     plot_fidelity_vs_time_plot(G, 'A', 'B', label=filename,
                                color=None, connected=True)
