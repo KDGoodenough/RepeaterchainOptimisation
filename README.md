@@ -6,7 +6,11 @@ Algorithm for optimising repeater protocols over arbitrary network configuration
 
 ### Prerequisites
 
-Requires NetworkX to handle the generation and handling of graphs, graphviz for saving and exporting scheme graphs to .pdf and .dot.
+Requires NetworkX to handle the generation and handling of graphs.
+
+version requirements:
+NetworkX 2.4
+Matplotlib 3.0.3
 
 ### How it works
 
