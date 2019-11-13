@@ -1,6 +1,5 @@
 *.pyc
 venv
-parameters/
 parameter exploration IP/
 pkl files/
 long distance 10 repeaters NP/

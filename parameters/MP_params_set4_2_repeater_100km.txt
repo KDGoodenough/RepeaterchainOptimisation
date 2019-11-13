@@ -1,0 +1,84 @@
+## Repeater chain parameters
+n = 2
+distance = 100
+
+simulation_type = “MP"  # Sets the system to be analyzed, can be "IP" or "MP".
+MP_to_IP = False  # sets how elementary link generation is done.
+
+
+## System parameters
+distillation_rounds = 0  # number of times distillation is considered
+Latt = 22 # Attenuation length
+c = 207110.19 # 299792 / 1.4475
+
+# Detectors and losses in devices
+dark_counts = 10  # average # of dark counts in detectors
+integration_time = 30e-9  # integration time of the detectors, time-window for which photons are detected
+pps = 0.999
+pdet = 0.999
+pem = 0.999
+
+
+T1 = 1e1
+T2 = 1e1
+T3 = 0
+T4 = 0
+Tamp = 9e9 # Tamp is currently not used in the error models. 
+
+number_of_fibres = 1e7  # number of modes in between nodes for repeater chain
+initial_prep_time = 6e-6
+T_prep = 6e-6
+distillation_time = 6e-6
+bell_swap_time = 6e-6
+
+F_g = 0.98
+
+F_prep = 0.99
+
+bsm_deph = 1
+bell_swap_time = 6e-6
+meas_deph = 1
+
+photon_to_memory_depol = 0.998
+photon_to_memory_deph = 0.998
+bsm_prob = 0.9375
+
+phase_uncertainty = 14.3
+
+# Simulation parameters
+total_pruning = False
+general_distillation = True
+symmetricoptimisation = False
+# sets multithreading for the different partitions considering for swapping.
+# leads to speed-up as the number of nodes increase.
+multi_threading = False
+
+threshold_fidelity = 0.5  # lowest fidelity that will be allowed to be stored
+
+min_ELG_prob = 0.9  # min success probability required for elementary link generation
+max_ELG_prob = 0.999  # max success probability required for elementary link generation
+
+min_global_prob = 0.9  # min success probability required for all other protocols besides elementary link generation
+max_global_prob = 0.999  # max success probability required for all other protocols besides elementary link generation
+
+epsilon_f = 0.01  # coarse-graining parameter for the fidelity
+epsilon_p = 0.02  # coarse-graining parameter for the success probability
+
+eps_dist = 0.05  # heuristics parameter for banded distillation. discussed in heuristics section of paper
+eps_swap = 0.05  # heuristics parameter for banded swapping. discussed in heuristics section of paper
+
+true_deterministic_delivery = False
+# If true, calculate the noise experienced when the state would have arrived after
+# the first round, otherwise take the average. Results in paper correspond to False.
+worst_case = False
+
+# Sets whether during distillation the states are generated sequentially or in parallel.
+seq_distillation = True
+
+# restricts the optimisation to symmetric/uniform repeater chains.
+# Does not check whether the chain is actually symmetric!
+uniform_sim = True
+
+pert = 0  # adds additional randomness to the placement of nodes. Default = 0
+
+
