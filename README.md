@@ -12,6 +12,27 @@ version requirements:
 NetworkX 2.4
 Matplotlib 3.0.3
 
+##Running the code
+An example code can be found in main.py, where the optimisation is run for information-processing platforms,
+for a distance of 50 km, n=1 repeater nodes, and IP parameter set 1. The results are displayed in a
+fidelity vs time plot. This reconstructs one of the plots in Fig. 7 of the paper.
+
+    filename = 'MP_params_set4_3_repeater_200km'
+    optimise_repeater_with_parameters_from_file(filename=filename)
+
+    plt.show()
+
+
+By selecting as 'filename'  IP_params_set1_0_repeater_50km.txt, IP_params_set1_1_repeater_50km.txt and IP_params_set1_2_repeater_50km.txt in main.py
+ the plot from Fig. 7 can be reconstructed. In general, the parameter files have the following form : PLATFORM_params_set#_NUM#REPEATERS_DISTANCE.txt
+
+##### Output of the code
+The code above creates a global variable called path_dict which contains all optimised schemes for each of the (multi-hop) links. All plot functions can be used by passing the stored path_dicts to them.
+##### Changing the parameters
+All the parameters can be adjusted by changing them in the accompanying .txt files
+
+
+
 ### How it works
 
 #### High-level introduction
@@ -67,7 +88,10 @@ A protocol at the very least needs to call at the end add_scheme with a scheme. 
     :param prob: float. probability that the scheme has succeeded
     :param fidelity: float. fidelity of the state to the maximally entangled state
     
-An example code can be found in main.py, where the optimisation is run for information-processig platforms,
-for a distance of 20 km, n=1 repeater nodes, and the parameters in global_file.py. The results are displayed in a
-fidelity vs time plot.
-# RepeaterOptimisationCode
+An example code can be found in main.py, where the optimisation is run for information-processing platforms,
+for a distance of 50 km, n=1 repeater nodes, and IP parameter set 1. The results are displayed in a
+fidelity vs time plot. This reconstructs one of the plots in Fig. 7 of the paper.
+
+By selecting as 'filename'  IP_params_set1_0_repeater_50km.txt, IP_params_set1_1_repeater_50km.txt and IP_params_set1_2_repeater_50km.txt in main.py
+ the plot from Fig. 7 can be reconstructed. In general, the parameter files have the following form : PLATFORM_params_set#_NUM#REPEATERS_DISTANCE.txt
+
