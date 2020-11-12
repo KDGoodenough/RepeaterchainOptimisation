@@ -88,10 +88,3 @@ A protocol at the very least needs to call at the end add_scheme with a scheme. 
     :param prob: float. probability that the scheme has succeeded
     :param fidelity: float. fidelity of the state to the maximally entangled state
     
-An example code can be found in main.py, where the optimisation is run for information-processing platforms,
-for a distance of 50 km, n=1 repeater nodes, and IP parameter set 1. The results are displayed in a
-fidelity vs time plot. This reconstructs one of the plots in Fig. 7 of the paper.
-
-By selecting as 'filename'  IP_params_set1_0_repeater_50km.txt, IP_params_set1_1_repeater_50km.txt and IP_params_set1_2_repeater_50km.txt in main.py
- the plot from Fig. 7 can be reconstructed. In general, the parameter files have the following form : PLATFORM_params_set#_NUM#REPEATERS_DISTANCE.txt
-
