@@ -13,6 +13,7 @@ NetworkX 2.4
 Matplotlib 3.0.3
 
 ##Running the code
+
 An example code can be found in main.py, where the optimisation is run for information-processing platforms,
 for a distance of 50 km, n=1 repeater nodes, and IP parameter set 1. The results are displayed in a
 fidelity vs time plot. This reconstructs one of the plots in Fig. 7 of the paper.
